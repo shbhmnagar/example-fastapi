@@ -18,7 +18,6 @@ class UserOut(BaseModel):
         orm_mode = True
 
 
-
 class UserLogin(BaseModel):
     email: EmailStr
     password: str
@@ -38,7 +37,7 @@ class Post(PostBase):
     id: int
     created_at: datetime
     user_id: int
-    user : UserOut
+    user: UserOut
 
     class Config:
         orm_mode = True
@@ -47,7 +46,6 @@ class Post(PostBase):
 class PostOut(BaseModel):
     Post: Post
     votes: int
-
 
 
 class Token(BaseModel):
